@@ -37,14 +37,21 @@ public class main {
                     }
                     break;
                 case 3:
-                    System.out.println("Enter Roll No to search:");
-                    String searchroll = sc.next();
-                    int i = findstudent(searchroll, s, count);
-                    if (i != -1) {
-                        System.out.println("\nFound Student Details:");
-                        s[i].displaydetails();
-                    } else {
-                        System.out.println("\nStudent Not Found!!");
+                    System.out.println("Search Options \n 1.Year \n 2.Rollno \n 3.Dept \n 4.Section");
+                    int searchoption = sc.nextInt();
+                    switch (searchoption) {
+                        case 1:
+                            System.out.println("Enter Department: ");
+                            String department = sc.next();
+                            int[] list = new int[dbsize];
+                            Arrays.fill(list, -1);
+                            Student.findstudentdept(s, department, count, list);
+                            for (int i = 0; i < dbsize; i++) {
+                                if (list[i] != -1) {
+                                    s[list[i]].displaydetails();
+                                }
+                            }
+                            break;
                     }
                     break;
                 case 4:
@@ -56,3 +63,13 @@ public class main {
         }
     }
 }
+
+// System.out.println("Enter Roll No to search:");
+// String searchroll = sc.next();
+// int i = findstudent(searchroll, s, count);
+// if (i != -1) {
+// System.out.println("\nFound Student Details:");
+// s[i].displaydetails();
+// } else {
+// System.out.println("\nStudent Not Found!!");
+// }
