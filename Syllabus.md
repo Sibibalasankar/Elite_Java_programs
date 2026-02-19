@@ -5,4 +5,5 @@
 5.Reference 
 6.Inheritance
 7.Interface
-8.
+8.Password Validation Exception -> Task(PasswordInvalidException) -min12Letters,i->symbolCaps 1 small1 Digit2;
+9.
