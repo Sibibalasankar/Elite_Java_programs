@@ -1,6 +1,9 @@
-import java.util.*;
+package app;
 
-public class main {
+import java.util.*;
+import java.io.*;
+
+public class Main {
 
     public static void main(String[] args) {
 
@@ -36,10 +39,19 @@ public class main {
                     }
 
                     try {
-                        s[count++] = new Student(data);
+                        s[count] = new Student(data);
                         System.out.println("Student Added Successfully!");
+                        count++;
                     } catch (DepartmentInvalidException e) {
                         System.out.println(e.getMessage());
+                        try {
+                            FileWriter fw = new FileWriter("app/user1.txt", true);
+                            fw.write("Invalid Entry: " + data + "\n");
+                            fw.close();
+                        } catch (IOException io) {
+                            System.out.println("Error writing to file.");
+                        }
+
                     } catch (Exception e) {
                         System.out.println("Invalid Input Format!");
                     }
@@ -54,11 +66,11 @@ public class main {
 
                 case 3:
                     System.out.println(
-                            "Search Options\n" +
-                                    "1. Year\n" +
-                                    "2. Roll No\n" +
-                                    "3. Department\n" +
-                                    "4. Section");
+                            "Search Options\n"
+                            + "1. Year\n"
+                            + "2. Roll No\n"
+                            + "3. Department\n"
+                            + "4. Section");
 
                     int searchOption = sc.nextInt();
                     sc.nextLine();

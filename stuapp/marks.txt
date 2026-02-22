@@ -1,0 +1,3 @@
+Maths:90
+Java:95
+DSA:88
