@@ -6,54 +6,55 @@ public class Node {
     Node prev;
     Node next;
 
-    Node(int a) {
-        this.data = a;
-        this.prev = null;
-        this.next = null;
-    }
-
     static Node first = null;
     static Node last = null;
 
-    static void PrintList() {
+    Node(int a){
+        data = a;
+        prev = null;
+        next = null;
+    }
 
-        if(first == null) return;
+    static void PrintList(){
+
+        if(first == null)
+            return;
 
         Node temp = first;
 
-        do {
+        do{
             System.out.print(temp.data + " ");
             temp = temp.next;
-        } while(temp != first);
+        }while(temp != first);
     }
 
-    static void PrintBackwards() {
+    static void PrintBackwards(){
 
-        if(last == null) return;
+        if(last == null)
+            return;
 
         Node temp = last;
 
-        do {
+        do{
             System.out.print(temp.data + " ");
             temp = temp.prev;
-        } while(temp != last);
+        }while(temp != last);
     }
 
-    public static void main(String args[]) {
+    public static void main(String args[]){
 
         Scanner sc = new Scanner(System.in);
-
         int a = sc.nextInt();
 
-        while (a != -1) {
+        while(a != -1){
 
             Node temp = new Node(a);
 
-            if (first == null) {
+            if(first == null){
                 first = temp;
                 last = temp;
-            } 
-            else {
+            }
+            else{
                 last.next = temp;
                 temp.prev = last;
                 last = temp;
@@ -62,6 +63,7 @@ public class Node {
             a = sc.nextInt();
         }
 
+        // make circular
         last.next = first;
         first.prev = last;
 

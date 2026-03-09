@@ -1,32 +1,33 @@
 import java.util.*;
 
-class Node {
+public class Node {
+
     int data;
     Node next;
-
-    Node(int a){
-        this.data = a;
-        this.next = null;
-    }
-}
-
-class Linkdlist{
 
     static Node first = null;
     static Node last = null;
 
+    Node(int a){
+        data = a;
+        next = null;
+    }
+
     static void PrintList(){
+        if(first == null)
+            return;
+
         Node temp = first;
 
-        while(temp != null){
+        do{
             System.out.print(temp.data + " ");
             temp = temp.next;
-        }
+        }while(temp != first);
     }
 
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
 
+        Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
 
         while(a != -1){
@@ -44,6 +45,9 @@ class Linkdlist{
 
             a = sc.nextInt();
         }
+
+        // make circular
+        last.next = first;
 
         PrintList();
     }
