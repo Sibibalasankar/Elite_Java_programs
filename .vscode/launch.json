@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "linkedlistapp.Main",
+            "projectName": "Elite Class_9e435552"
+        },
+        {
+            "type": "java",
             "name": "Linkdlist",
             "request": "launch",
             "mainClass": "Linkdlist",

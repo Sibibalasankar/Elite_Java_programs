@@ -1,3 +1,4 @@
+package DataStructures.linkedlist.Single;
 import java.util.*;
 
 class Node {
