@@ -1,4 +1,4 @@
-package DataStructures.linkedlist.Double;
+package datadstructures.linkedlist.double;
 
 import java.util.*;
 

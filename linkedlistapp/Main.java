@@ -11,14 +11,13 @@ public class Main {
         LinkedList list = new LinkedList();
 
         while (true) {
-            System.out.println("Enter your choice: \n 1.Add element \n 2.Search for element \n 3.Delete Element \n 4.Print the data \n 5.Exit");
+            System.out.println("Enter your choice: \n 1.Add element \n 2.Append Element \n 3.Insert Element at First Node \n 4.Print the data \n 5.Get Number of Nodes \n 6.Find the Second last Element \n 7.Insert Element \n 8.Exit");
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
                     System.out.println("Enter Elements: (Formate must be 1,2,3,4...)");
                     String values = sc.next();
-                    // String[] nums = values.split(",");
-                    String[] nums = values.split("[^0-9]");
+                    String[] nums = values.split("[^0-9]+");
                     for (String num : nums) {
                         if (num.matches("\\d+")) {
                             int valid_num = Integer.parseInt(num);
@@ -27,16 +26,34 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("This Feature is Comming soon!\n");
+                    System.out.println("Enter the Element: ");
+                    int value = sc.nextInt();
+                    list.add(value);
                     break;
                 case 3:
-                    System.out.println("This Feature is Comming soon!\n");
+                    System.out.println("Enter the Element: ");
+                    int val = sc.nextInt();
+                    list.insertAtFirst(val);
                     break;
                 case 4:
-                    list.printList();
+                    list.printForward();
                     break;
                 case 5:
+                    System.out.println("Number of Nodes: " + list.size());
+                    break;
+                case 6:
+                    list.findSecondLastElement();
+                    return;
+                case 7:
+                    System.out.println("Enter the Position to insert:");
+                    int position = sc.nextInt();
+                    System.out.println("Enter the Element to insert:");
+                    int element = sc.nextInt();
+                    list.InsertElement(position,element);
+                    return;
+                case 8:
                     System.out.println("Bye Bye!!");
+                    sc.close();
                     return;
             }
 

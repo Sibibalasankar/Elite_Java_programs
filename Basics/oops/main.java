@@ -1,4 +1,4 @@
-package oops;
+package Basics.oops;
 
 class Animal {
 
