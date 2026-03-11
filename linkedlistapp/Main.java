@@ -47,10 +47,14 @@ public class Main {
                 case 7:
                     System.out.println("Enter the Position to insert:");
                     int position = sc.nextInt();
+                    if(position < 1 || position > list.size() + 1) {
+                        System.out.println("Invalid Position");
+                        break;
+                    }
                     System.out.println("Enter the Element to insert:");
                     int element = sc.nextInt();
                     list.InsertElement(position,element);
-                    return;
+                    break;
                 case 8:
                     System.out.println("Bye Bye!!");
                     sc.close();
