@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainDoubleEndedQueue",
+            "request": "launch",
+            "mainClass": "queuetasks.MainDoubleEndedQueue",
+            "projectName": "Elite Class_9e435552"
+        },
+        {
+            "type": "java",
+            "name": "QueueInLinkedList",
+            "request": "launch",
+            "mainClass": "queuetasks.QueueInLinkedList",
+            "projectName": "Elite Class_9e435552"
+        },
+        {
+            "type": "java",
+            "name": "QueueTask",
+            "request": "launch",
+            "mainClass": "queuetasks.QueueTask",
+            "projectName": "Elite Class_9e435552"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "arraytasks.Main",
+            "projectName": "Elite Class_9e435552"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "linkedlistapp.Main",
