@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PriorityQueueMain",
+            "request": "launch",
+            "mainClass": "linkedlistapp.PriorityQueueMain",
+            "projectName": "Elite Class_9e435552"
+        },
+        {
+            "type": "java",
+            "name": "ReverseLinkedList",
+            "request": "launch",
+            "mainClass": "linkedlistapp.ReverseLinkedList",
+            "projectName": "Elite Class_9e435552"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearchTree",
+            "request": "launch",
+            "mainClass": "BinarySearchTree",
+            "projectName": "Elite Class_9e435552"
+        },
+        {
+            "type": "java",
             "name": "CircularQueueMain",
             "request": "launch",
             "mainClass": "queuetasks.CircularQueueMain",
