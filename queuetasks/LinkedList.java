@@ -57,6 +57,10 @@ class LinkedList {
         size--;
     }
 
+    public static void printData(){
+        System.out.println("Hello");
+    }
+
     public void print() {
 
         if (front == null) {

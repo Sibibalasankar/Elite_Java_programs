@@ -32,9 +32,10 @@ public class QueueInLinkedList {
                     break;
                 case 2:
                     q.dequeue();
+                    
                     break;
                 case 3:
-                    q.print();
+                    printData();
                     break;
                 case 4:
                     System.out.println("Exit");
